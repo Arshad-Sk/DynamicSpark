@@ -89,8 +89,8 @@
             dest="{{item.dest}}"
             state=link
       with_items:
-        - { src: "/usr/lib/spark-2.4.8-bin-hadoop2.7", dest: "/usr/lib/spark"}
-        - { src: "/usr/lib/spark-2.4.8-bin-hadoop2.7/conf", dest: "/etc/spark/conf"}
+        - { src: "/usr/lib/spark-3.1.2-bin-hadoop2.7", dest: "/usr/lib/spark"}
+        - { src: "/usr/lib/spark-3.1.2-bin-hadoop2.7/conf", dest: "/etc/spark/conf"}
       when: spark_symlinks_enabled
       tags: ["symlinks"]
       
