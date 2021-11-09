@@ -41,14 +41,15 @@
         user: spark
         state: present
         key: "{{ lookup('file','buffer/Master-1-id_rsa.pub')}}"
-#      when: ansible_hostname != "{{ item }}" or ansible_hostname == "{{ item }}"
- #     with_items: "{{groups['tag_cluster_spk']}}"
+      when: ansible_hostname != "{{ item }}" or ansible_hostname == "{{ item }}"
+      with_items: "{{groups['tag_cluster_spk']}}"
 
-      when: "{{ item.dest != ansible_hostname }}"
-      with_items:
-        - { dest: "{{groups['tag_cluster_spk'][2]}}"}
-        - { dest: "{{groups['tag_cluster_spk'][1]}}"}
-        - { dest: "{{groups['tag_cluster_spk'][0]}}"}
+
+ #    when: "{{ item.dest != ansible_hostname }}"
+ #    with_items:
+ #      - { dest: "{{groups['tag_cluster_spk'][2]}}"}
+ #      - { dest: "{{groups['tag_cluster_spk'][1]}}"}
+ #      - { dest: "{{groups['tag_cluster_spk'][0]}}"}
           #when: "{{ item != ansible_hostname }}"
           #with_items:
           #- "{{ groups['demo']}}"
