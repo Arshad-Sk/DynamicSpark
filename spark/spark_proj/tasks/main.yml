@@ -168,7 +168,7 @@
       args:
         chdir: "{{spark_usr_parent_dir}}/spark/"
       ignore_errors: no
-      when: inventory_hostname in groups['tag_Env_namenode']
+      when: inventory_hostname in groups['tag_Env_Master']
            
     - name: create spark event log dir
       file: path="{{spark_eventlog_dir}}"
@@ -184,7 +184,7 @@
       args:
         chdir: "{{spark_usr_parent_dir}}/spark/"
       ignore_errors: yes
-      when: inventory_hostname in groups['tag_Env_namenode']
+      when: inventory_hostname in groups['tag_Env_Master']
 
 
 
