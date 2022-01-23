@@ -186,6 +186,16 @@
         chdir: "{{spark_usr_parent_dir}}/spark/"
       ignore_errors: yes
       when: inventory_hostname in groups['tag_Env_Master']
+      
+      
+    - name: create data dir
+      file: path="{{spark_usr_parent_dir}}/data_backup"
+            owner={{spark_user}}
+            group={{ spark_user }}
+            state=directory
+            mode=0775
+      
+      
 
 
 
