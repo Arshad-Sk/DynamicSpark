@@ -198,7 +198,7 @@
             mode=0775
             
     - name: move dir
-      shell: "cp -f {{spark_usr_parent_dir}}/spark-{{spark_version}} {{spark_usr_parent_dir}}/data_backup"
+      shell: "cp -R {{spark_usr_parent_dir}}/spark-{{spark_version}} {{spark_usr_parent_dir}}/data_backup"
       ignore_errors: yes
       
       
