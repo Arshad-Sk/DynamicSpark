@@ -187,13 +187,19 @@
       ignore_errors: yes
       when: inventory_hostname in groups['tag_Env_Master']
       
-      
+    - name: remove data dir
+      shell: "rm -rf {{spark_usr_parent_dir}}/data_backup"
+  
     - name: create data dir
       file: path="{{spark_usr_parent_dir}}/data_backup"
             owner={{spark_user}}
             group={{ spark_user }}
             state=directory
             mode=0775
+            
+    - name: move dir
+      shell: "mv -f {{spark_usr_parent_dir}}/spark-{{spark_version}} {{spark_usr_parent_dir}}/data_backup"
+      ignore_errors: yes
       
       
 
