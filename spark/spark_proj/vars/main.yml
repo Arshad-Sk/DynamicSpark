@@ -30,7 +30,7 @@
    spark_env_extras: {}
    spark_defaults_extras: {}
 
-   # Logger levels set to the official default
+   # Logger levels set to the official defaults
    # Ref: https://github.com/apache/spark/blob/master/conf/log4j.properties.template
    spark_log4j_loggers:
      - name: log4j.logger.org.apache.spark.repl.Main
