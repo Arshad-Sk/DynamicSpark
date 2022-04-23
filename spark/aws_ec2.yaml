@@ -13,7 +13,7 @@ filters:
    instance-state-name : running
 
 #filters:
-  # All instances with their `Environment` tag set to `dev`.
+  # All instances with their `Environment` tag set to `dev`
   # tag:Environment: dev
   # All dev and QA hosts
 # tag:Name:
