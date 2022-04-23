@@ -13,7 +13,7 @@
             state=directory
       tags: ["config"]
 
-    - name: Ensure Spark log and run directories exist
+    - name: Ensure Spark log and run directories exist here
       file: path="{{ item}}"
             owner={{spark_user}}
             group={{ spark_user }}
