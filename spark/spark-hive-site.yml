@@ -1,5 +1,5 @@
 ---
-- name: Deploy hive-site.xml in spark's conf directoryy
+- name: Deploy hive-site.xml in spark's conf directory
   template:
     src: "templates/hive-site.xml.j2"
     dest: "{{spark_usr_parent_dir}}/spark-{{spark_version}}/conf/hive-site.xml"
