@@ -1,4 +1,4 @@
---- # Installl
+--- # Install
 - hosts: tag_Name_Master*,tag_Name_Slave*
   user: ansible
   become: yes
