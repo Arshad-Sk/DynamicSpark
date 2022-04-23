@@ -9,4 +9,4 @@ Master-1 ansible_host=172.31.31.97
 
 [nodes]
 Slave-1 ansible_host=172.31.22.253
-Slave-2 ansible_host=172.31.20.124
+Slave-2 ansible_host=172.31.20.124.
