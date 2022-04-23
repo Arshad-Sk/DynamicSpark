@@ -1,4 +1,4 @@
-#  - name: host file update - Local DNS setup across all the server
+#  - name: host file update - Local DNS setup across all the servers
 #   hosts: demo
 #   gather_facts: yes
 #   tasks:
