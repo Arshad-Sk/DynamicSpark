@@ -15,7 +15,7 @@
       tags: ["spark-user"]
 
     
-      ####################### Spark user passwordless SSH ##################
+      ####################### Spark user passwordless SSH #################
     - name: SSH KeyGen command
       become: yes
       become_user: spark
