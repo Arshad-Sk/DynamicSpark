@@ -1,6 +1,6 @@
 --- # tasks file for spark_proj
 
-      ####################### Update /etc/hosts file     ##################
+      ####################### Update /etc/hosts file     #################
 
     - include: etchost.yaml
       ####################### Update /etc/hosts file     ##################
