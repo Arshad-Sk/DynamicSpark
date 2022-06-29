@@ -8,7 +8,7 @@
             groups="{{ spark_user_groups | join(',')}}"
       tags: ["spark-user"]
 
-    - name: Ensure Spark configuration directory exists
+    - name: Ensure Spark configuration directory exists.
       file: path="{{ spark_conf_dir}}"
             state=directory
       tags: ["config"]
