@@ -8,7 +8,7 @@
    - spark_hive_metastore_db_installed
    - spark_hive_site_properties|length > 0
 
-- name: Ensure hive-site.xml removed from spark's conf directory
+- name: Ensure hive-site.xml removed from spark's conf directory.
   file:
     path: "{{spark_usr_parent_dir}}/spark-{{spark_version}}/conf/hive-site.xml"
     state: absent
