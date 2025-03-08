@@ -42,7 +42,8 @@
         user: spark
         state: present
         key: "{{ lookup('file','buffer/Master-1-id_rsa.pub')}}"
-      when: ansible_hostname != "{{ item }}" or ansible_hostname == "{{ item }}"
+ ##     when: ansible_hostname != "{{ item }}" or ansible_hostname == "{{ item }}"    <<9Marcg2025  added 46 line>>
+      when: "{{ item.dest != ansible_hostname }}"
       with_items: "{{groups['tag_cluster_spk']}}"
 
 
